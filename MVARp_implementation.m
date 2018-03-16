@@ -1,4 +1,4 @@
-function [A,permu,sig] = MVARp_implementation(X,nperm,alpha)
+function [A,permu,sig,elapsed] = MVARp_implementation(X,nperm,alpha)
 %function to compute coefficient matrix A = Q1/Q0 from a MVAR model Xt = AXt-1 + Et
 % and significance of each A_ij using a permutation test via variable
 % randomization.
@@ -13,6 +13,7 @@ function [A,permu,sig] = MVARp_implementation(X,nperm,alpha)
 % permu: the coefficients obtained for each of the p permutation
 % sig: a binary matrix with significant edges: sig_ij implies i -> j,
 %   formally i_t-1 -> j_t
+% elapsed: running time in seconds
 %
 %This code implements https://github.com/MatthieuGilson/toy_models/blob/master/MVAR_Granger_detection.py
 %Gilson, M., Tauste Campo, A., Chen, X., Thiele, A., & Deco, G. (2017).
@@ -21,6 +22,7 @@ function [A,permu,sig] = MVARp_implementation(X,nperm,alpha)
 
 
 %%
+tstart = tic;
 
 nodes = size(X,2);  %get number of nodes
 
@@ -77,7 +79,7 @@ sensitivity = alpha*nperm;  %the threshold for significance relative to the data
    sig = abs(A) > max_A_ij(:,:,end-sensitivity);
 
 
-   
+ elapsed = toc(tstart);  
    
     
     
