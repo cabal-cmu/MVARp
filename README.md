@@ -2,8 +2,8 @@
 
 Matlab function to run the MVARp method presented in
 Gilson, M., Tauste Campo, A., Chen, X., Thiele, A., & Deco, G. (2017).
-Nonparametric test for connectivity detection in multivariate autoregressive networks 
-and application to multiunit activity data. Network Neuroscience, (Early Access), 1-24.
+[Nonparametric test for connectivity detection in multivariate autoregressive networks 
+and application to multiunit activity data](https://doi.org/10.1162/NETN_a_00019). Network Neuroscience, (Early Access), 1-24.
 And implemented in:
 https://github.com/MatthieuGilson/toy_models/blob/master/MVAR_Granger_detection.py
 
