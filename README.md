@@ -1,6 +1,6 @@
 # MVARp
 
-In-house Matlab implementation to run the MVARp method presented in
+In-house Matlab implementation of the MVARp algorithm presented in
 Gilson, M., Tauste Campo, A., Chen, X., Thiele, A., & Deco, G. (2017).
 [Nonparametric test for connectivity detection in multivariate autoregressive networks 
 and application to multiunit activity data](https://doi.org/10.1162/NETN_a_00019). Network Neuroscience, 1(4), 357-380.
